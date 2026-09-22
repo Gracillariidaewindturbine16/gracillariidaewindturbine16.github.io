@@ -3,310 +3,130 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Loopvity — Crafting Thoughtful Mobile Experiences</title>
-  <meta name="description" content="Loopvity is an independent software studio focused on building privacy-first, powerful mobile applications for iOS and Android.">
-  <style>
-    :root {
-      --bg: #000000;
-      --card-bg: rgba(255, 255, 255, 0.04);
-      --card-border: rgba(255, 255, 255, 0.08);
-      --text-main: #f5f5f7;
-      --text-muted: #86868b;
-      --accent: #2997ff;
-      --max-width: 980px;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      background-color: var(--bg);
-      color: var(--text-main);
-      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
-      -webkit-font-smoothing: antialiased;
-      line-height: 1.5;
-    }
-
-    /* 頂部導航欄 (Apple 風格毛玻璃) */
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(0, 0, 0, 0.75);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border-bottom: 1px solid var(--card-border);
-    }
-
-    .nav-container {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 14px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .brand {
-      font-size: 1.15rem;
-      font-weight: 600;
-      letter-spacing: -0.02em;
-      color: #fff;
-    }
-
-    .nav-links a {
-      color: var(--text-muted);
-      text-decoration: none;
-      font-size: 0.85rem;
-      margin-left: 24px;
-      transition: color 0.2s;
-    }
-
-    .nav-links a:hover {
-      color: #fff;
-    }
-
-    /* Hero 區域 */
-    .hero {
-      max-width: var(--max-width);
-      margin: 100px auto 80px auto;
-      padding: 0 20px;
-      text-align: center;
-    }
-
-    .hero-eyebrow {
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: var(--accent);
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      margin-bottom: 16px;
-    }
-
-    .hero-title {
-      font-size: 3.5rem;
-      font-weight: 700;
-      letter-spacing: -0.04em;
-      line-height: 1.08;
-      margin-bottom: 24px;
-      background: linear-gradient(180deg, #fff 0%, #a1a1a6 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .hero-sub {
-      font-size: 1.25rem;
-      color: var(--text-muted);
-      max-width: 620px;
-      margin: 0 auto;
-      line-height: 1.45;
-      font-weight: 400;
-    }
-
-    /* 產品展區 */
-    .section-title {
-      max-width: var(--max-width);
-      margin: 0 auto 30px auto;
-      padding: 0 20px;
-      font-size: 1.75rem;
-      font-weight: 600;
-      letter-spacing: -0.02em;
-    }
-
-    .products {
-      max-width: var(--max-width);
-      margin: 0 auto 120px auto;
-      padding: 0 20px;
-    }
-
-    .product-card {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 20px;
-      padding: 40px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      backdrop-filter: blur(10px);
-      transition: transform 0.3s ease, border-color 0.3s ease;
-    }
-
-    .product-card:hover {
-      border-color: rgba(255, 255, 255, 0.2);
-      transform: translateY(-2px);
-    }
-
-    .product-tag {
-      font-size: 0.75rem;
-      font-weight: 600;
-      color: var(--accent);
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      margin-bottom: 10px;
-    }
-
-    .product-name {
-      font-size: 2rem;
-      font-weight: 600;
-      letter-spacing: -0.02em;
-      margin-bottom: 12px;
-    }
-
-    .product-desc {
-      color: var(--text-muted);
-      font-size: 1.05rem;
-      max-width: 580px;
-      margin-bottom: 24px;
-    }
-
-    .badge-group {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .badge {
-      display: inline-block;
-      font-size: 0.8rem;
-      padding: 6px 14px;
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid var(--card-border);
-      border-radius: 9999px;
-      color: #e5e5ea;
-    }
-
-    /* 核心理念/特性 */
-    .philosophy {
-      max-width: var(--max-width);
-      margin: 0 auto 120px auto;
-      padding: 0 20px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
-    }
-
-    .philo-box {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 16px;
-      padding: 32px;
-    }
-
-    .philo-box h3 {
-      font-size: 1.25rem;
-      font-weight: 600;
-      margin-bottom: 12px;
-      letter-spacing: -0.01em;
-    }
-
-    .philo-box p {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      line-height: 1.5;
-    }
-
-    /* 頁尾 */
-    footer {
-      border-top: 1px solid var(--card-border);
-      padding: 40px 20px;
-      text-align: center;
-      font-size: 0.85rem;
-      color: var(--text-muted);
-    }
-
-    .footer-links {
-      margin-bottom: 16px;
-    }
-
-    .footer-links a {
-      color: var(--text-muted);
-      text-decoration: none;
-      margin: 0 12px;
-      transition: color 0.2s;
-    }
-
-    .footer-links a:hover {
-      color: #fff;
-    }
-
-    @media (max-width: 768px) {
-      .hero-title {
-        font-size: 2.5rem;
-      }
-      .product-card {
-        padding: 28px;
-      }
-    }
-  </style>
+  <title>Loopvity — Mobile Software Studio</title>
+  <meta name="description" content="Loopvity is an independent software studio focused on privacy-first mobile applications.">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<!-- 預設載入英文，JS 會接管切換邏輯 -->
+<body class="lang-en">
 
-  <!-- 頂部導航 -->
-  <header>
+  <!-- 頂部導航列 (毛玻璃效果) -->
+  <header id="navbar">
     <div class="nav-container">
       <div class="brand">Loopvity</div>
       <div class="nav-links">
-        <a href="#apps">Apps</a>
-        <a href="#contact">Contact</a>
+        <a href="#philosophy" class="en">Philosophy</a>
+        <a href="#philosophy" class="zh">設計理念</a>
+        
+        <a href="#apps" class="en">Apps</a>
+        <a href="#apps" class="zh">應用程式</a>
+        
+        <a href="#contact" class="en">Contact</a>
+        <a href="#contact" class="zh">聯絡我們</a>
+        
+        <!-- 語言切換按鈕 -->
+        <button id="langToggle" class="lang-btn">
+          <span class="en">中</span>
+          <span class="zh">EN</span>
+        </button>
       </div>
     </div>
   </header>
 
-  <!-- 主視覺區塊 -->
-  <section class="hero">
-    <div class="hero-eyebrow">Mobile Software Studio</div>
-    <h1 class="hero-title">Crafting thoughtful,<br>privacy-first experiences.</h1>
-    <p class="hero-sub">
-      Loopvity designs and engineers high-performance utility applications with a relentless focus on simplicity, speed, and absolute local privacy.
-    </p>
+  <!-- 主視覺區塊 (Hero Section) -->
+  <section class="hero fade-in">
+    <div class="hero-content">
+      <h2 class="eyebrow en">Independent Mobile Studio</h2>
+      <h2 class="eyebrow zh">獨立行動應用工作室</h2>
+      
+      <h1 class="title en">Crafting thoughtful,<br>privacy-first experiences.</h1>
+      <h1 class="title zh">打造無微不至的<br>隱私安全行動體驗。</h1>
+      
+      <p class="subtitle en">Loopvity designs and engineers high-performance utility applications with a relentless focus on simplicity, speed, and absolute local privacy.</p>
+      <p class="subtitle zh">Loopvity 專注於設計與開發高效能實用工具，追求極致的簡約、流暢，以及絕對的本機隱私安全，讓數據完整保留在您的設備中。</p>
+    </div>
   </section>
 
-  <!-- 產品展示區 -->
-  <div class="section-title" id="apps">Featured App</div>
-  <section class="products">
-    <div class="product-card">
-      <div>
-        <div class="product-tag">iOS &amp; Android</div>
-        <div class="product-name">Prompt Vault</div>
-        <p class="product-desc">
-          An offline-first, zero-telemetry vault for organizing, searching, and managing system prompts and templates. Built with native performance and pure on-device storage.
-        </p>
+  <!-- 核心理念 (Philosophy) -->
+  <section id="philosophy" class="section bg-light">
+    <div class="container fade-in">
+      <h2 class="section-title en">Our Philosophy</h2>
+      <h2 class="section-title zh">核心理念</h2>
+      
+      <div class="grid-3">
+        <!-- 卡片 1 -->
+        <div class="card">
+          <div class="icon">✨</div>
+          <h3 class="en">Minimalist Design</h3>
+          <h3 class="zh">極簡設計</h3>
+          <p class="en">We believe utility software should be distraction-free. Every interface is refined down to the essentials.</p>
+          <p class="zh">我們深信實用工具應當專注且無干擾。每個介面都經過精心雕琢，只保留最核心的元素。</p>
+        </div>
+        <!-- 卡片 2 -->
+        <div class="card">
+          <div class="icon">🔒</div>
+          <h3 class="en">Privacy by Default</h3>
+          <h3 class="zh">隱私優先</h3>
+          <p class="en">Your data belongs to you. Our applications prioritize sandboxed local storage, eliminating telemetry.</p>
+          <p class="zh">您的數據完全屬於您自己。我們的應用程式採用本機沙盒儲存，絕不包含任何追蹤與遙測代碼。</p>
+        </div>
+        <!-- 卡片 3 -->
+        <div class="card">
+          <div class="icon">⚡</div>
+          <h3 class="en">Engineered for Speed</h3>
+          <h3 class="zh">極速效能</h3>
+          <p class="en">Optimized for instantaneous launches and frictionless workflows on every screen size.</p>
+          <p class="zh">針對瞬時啟動與流暢操作進行深度優化，確保在所有尺寸的螢幕上都能提供無縫體驗。</p>
+        </div>
       </div>
-      <div class="badge-group">
-        <span class="badge">100% Offline</span>
-        <span class="badge">Zero Cloud Telemetry</span>
-        <span class="badge">Local JSON Backup</span>
+    </div>
+  </section>
+
+  <!-- 特色產品 (Featured App) -->
+  <section id="apps" class="section">
+    <div class="container fade-in">
+      <h2 class="section-title en">Featured Application</h2>
+      <h2 class="section-title zh">代表作品</h2>
+      
+      <div class="app-showcase">
+        <div class="app-info">
+          <span class="app-badge en">iOS & Android</span>
+          <span class="app-badge zh">支援 iOS 與 Android</span>
+          
+          <h3 class="app-name">Prompt Vault</h3>
+          
+          <p class="en">An offline-first, zero-telemetry vault for organizing, searching, and managing system prompts and templates. Built with native performance and pure on-device storage.</p>
+          <p class="zh">一款純離線、零數據收集的 AI 提示詞管理保險箱。讓您安全地分類、搜尋與管理所有的 Prompt 範本，資料 100% 儲存於您的手機內。</p>
+          
+          <div class="feature-tags">
+            <span class="tag en">100% Offline</span>
+            <span class="tag zh">100% 離線運作</span>
+            
+            <span class="tag en">Zero Cloud Sync</span>
+            <span class="tag zh">零雲端同步</span>
+            
+            <span class="tag en">Local JSON Backup</span>
+            <span class="tag zh">本機 JSON 備份</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- 設計理念區 -->
-  <section class="philosophy">
-    <div class="philo-box">
-      <h3>Design &amp; Precision</h3>
-      <p>We believe utility software should be as intuitive and distraction-free as possible. Every interface is refined down to the essentials.</p>
-    </div>
-    <div class="philo-box">
-      <h3>Privacy as a Foundation</h3>
-      <p>Your data belongs to you. Our applications prioritize sandboxed local storage, eliminating unnecessary telemetry and external network dependencies.</p>
-    </div>
-    <div class="philo-box">
-      <h3>Engineered for Speed</h3>
-      <p>Optimized for instantaneous launches, responsive native gestures, and frictionless workflows on every screen size.</p>
-    </div>
-  </section>
-
-  <!-- 頁尾 -->
+  <!-- 頁尾 (Footer) -->
   <footer id="contact">
-    <div class="footer-links">
-      <a href="https://loopvity.github.io/prompt-vault-privacy/">Privacy Policy</a>
-      <a href="mailto:loopvity@gmail.com">Contact Support</a>
+    <div class="container footer-content fade-in">
+      <div class="footer-links">
+        <a href="https://loopvity.github.io/prompt-vault-privacy/" class="en" target="_blank">Privacy Policy</a>
+        <a href="https://loopvity.github.io/prompt-vault-privacy/" class="zh" target="_blank">隱私權政策</a>
+        
+        <a href="mailto:loopvity@gmail.com" class="en">Contact Support</a>
+        <a href="mailto:loopvity@gmail.com" class="zh">聯絡支援</a>
+      </div>
+      <p class="copyright">&copy; 2026 Loopvity. All rights reserved.</p>
     </div>
-    <p>&copy; 2026 Loopvity. All rights reserved.</p>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
