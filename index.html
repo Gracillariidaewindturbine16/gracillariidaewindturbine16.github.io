@@ -3,207 +3,122 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Loopvity — Professional App & System Development</title>
-  <meta name="description" content="Loopvity focuses on privacy-first app development, web design, and system solutions.">
+  <title>Loopvity — Privacy-First App Studio</title>
+  <meta name="description" content="Loopvity crafts high-performance, privacy-first mobile applications and systems.">
   <link rel="stylesheet" href="style.css">
-  <!-- 引入 FontAwesome 圖示 -->
+  <!-- 引入極簡圖示庫 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="lang-zh">
+<body class="lang-en">
 
-  <!-- 頂部導航列 -->
-  <header id="navbar">
+  <!-- 毛玻璃導航列 -->
+  <header>
     <div class="nav-container">
-      <div class="brand">
-        <span class="logo-icon"><i class="fa-solid fa-layer-group"></i></span>
-        LOOPVITY
-      </div>
-      <nav class="nav-links">
+      <a href="#" class="brand">Loopvity.</a>
+      <div class="nav-links">
         <a href="#services" class="en">Services</a>
         <a href="#services" class="zh">服務項目</a>
-        <a href="#about" class="en">About</a>
-        <a href="#about" class="zh">關於我們</a>
-        <a href="#features" class="en">Why Us</a>
-        <a href="#features" class="zh">核心優勢</a>
-      </nav>
+        <a href="#philosophy" class="en">Philosophy</a>
+        <a href="#philosophy" class="zh">設計理念</a>
+        <a href="https://loopvity.github.io/prompt-vault-privacy/" target="_blank" class="en">Privacy</a>
+        <a href="https://loopvity.github.io/prompt-vault-privacy/" target="_blank" class="zh">隱私政策</a>
+      </div>
       <div class="nav-actions">
         <button id="langToggle" class="lang-btn">
-          <span class="en">中文</span>
+          <span class="en">中</span>
           <span class="zh">EN</span>
         </button>
-        <a href="mailto:loopvity@gmail.com" class="cta-btn en">Contact Us</a>
-        <a href="mailto:loopvity@gmail.com" class="cta-btn zh">聯絡我們</a>
+        <a href="mailto:loopvity@gmail.com" class="contact-btn en">Contact</a>
+        <a href="mailto:loopvity@gmail.com" class="contact-btn zh">聯絡我們</a>
       </div>
     </div>
   </header>
 
-  <!-- 主視覺區 (Hero) -->
-  <section class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content fade-in">
-      <div class="hero-tag">App · Web · System</div>
-      <h1 class="en">App Development &<br>System Solutions</h1>
-      <h1 class="zh">專業 App 開發 ·<br>客製化系統建置</h1>
-      <p class="en">Providing reasonably priced, high-quality IT services. 100% privacy-focused, tailored for your business needs.</p>
-      <p class="zh">專注提供價格合理、重視數據隱私的客製化專業 IT 服務。專人一對一跟進，將您的商業概念轉化為頂級產品。</p>
+  <!-- 主視覺 (Hero) -->
+  <section class="hero fade-in">
+    <h2 class="hero-eyebrow en">Independent Mobile Studio</h2>
+    <h2 class="hero-eyebrow zh">獨立行動應用工作室</h2>
+    
+    <h1 class="hero-title en">Code with precision.<br>Privacy by design.</h1>
+    <h1 class="hero-title zh">極致細節雕琢，<br>捍衛數據隱私。</h1>
+    
+    <p class="hero-subtitle en">We engineer high-performance mobile apps and tailored systems. Zero telemetry, pure native experience.</p>
+    <p class="hero-subtitle zh">我們專注開發高效能手機 App 與企業系統。秉持零數據收集原則，提供最純粹的原生流暢體驗。</p>
+  </section>
+
+  <!-- 核心服務 (Services) -->
+  <section id="services" class="section bg-light">
+    <div class="container fade-in">
+      <h2 class="section-title en">Our Expertise</h2>
+      <h2 class="section-title zh">專業領域</h2>
       
-      <!-- 主視覺下方三個小圖標 -->
-      <div class="hero-icons">
-        <div class="h-icon-box">
-          <i class="fa-solid fa-mobile-screen"></i>
-          <span class="en">iOS / Android</span>
-          <span class="zh">手機 App 開發</span>
+      <div class="grid-3">
+        <div class="apple-card">
+          <i class="fa-brands fa-apple icon"></i>
+          <h3 class="en">iOS & Android Apps</h3>
+          <h3 class="zh">雙平台 App 開發</h3>
+          <p class="en">Native-feeling, offline-first mobile applications built for speed and security.</p>
+          <p class="zh">專注於流暢手感與離線架構，打造兼具速度與絕對安全的原生級行動應用。</p>
         </div>
-        <div class="h-icon-box">
-          <i class="fa-solid fa-laptop-code"></i>
-          <span class="en">Web Design</span>
-          <span class="zh">企業網站設計</span>
+        <div class="apple-card">
+          <i class="fa-solid fa-laptop-code icon"></i>
+          <h3 class="en">Web Experiences</h3>
+          <h3 class="zh">現代化網頁設計</h3>
+          <p class="en">Responsive, highly-optimized corporate websites that elevate your brand.</p>
+          <p class="zh">採用最新前端技術，為您的企業量身打造具備極高轉換率與質感的品牌官網。</p>
         </div>
-        <div class="h-icon-box">
-          <i class="fa-solid fa-server"></i>
-          <span class="en">System Dev</span>
-          <span class="zh">公司系統開發</span>
+        <div class="apple-card">
+          <i class="fa-solid fa-server icon"></i>
+          <h3 class="en">Custom Systems</h3>
+          <h3 class="zh">企業系統建置</h3>
+          <p class="en">Scalable backend architectures and internal tools tailored to your workflow.</p>
+          <p class="zh">度身訂造的內部管理系統與自動化架構，大幅提升團隊營運效率。</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 三大服務卡片區 -->
-  <section id="services" class="section bg-gray">
+  <!-- 代表作 (Featured App) -->
+  <section id="philosophy" class="section">
     <div class="container fade-in">
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="s-icon"><i class="fa-solid fa-code"></i></div>
-          <h3 class="en">Web Design</h3>
-          <h3 class="zh">網頁設計</h3>
-          <p class="en">Modern, responsive, and SEO-optimized corporate websites to boost your brand identity.</p>
-          <p class="zh">全新現代化響應式設計，結合 SEO 優化，為您的企業打造具備極高轉換率的品牌官網。</p>
+      <div class="featured-box">
+        <div class="featured-text">
+          <span class="badge en">Featured Project</span>
+          <span class="badge zh">代表作品</span>
+          <h2>Prompt Vault</h2>
+          <p class="en">A 100% offline, privacy-first vault for managing AI prompts. All data stays strictly on your device.</p>
+          <p class="zh">一款 100% 離線運作的 AI 提示詞管理保險箱。零雲端同步、零數據追蹤，所有資料絕對保留在您的設備中。</p>
+          <div class="tags">
+            <span>Offline First</span>
+            <span>Zero Tracking</span>
+            <span>JSON Backup</span>
+          </div>
         </div>
-        <div class="service-card active">
-          <div class="s-icon"><i class="fa-brands fa-app-store-ios"></i></div>
-          <h3 class="en">App Development</h3>
-          <h3 class="zh">手機 App 開發</h3>
-          <p class="en">Native and cross-platform mobile applications prioritizing speed, UX, and offline privacy.</p>
-          <p class="zh">專注於流暢的使用者體驗與原生效能，並強調資料加密與本機離線隱私安全。</p>
-        </div>
-        <div class="service-card">
-          <div class="s-icon"><i class="fa-solid fa-database"></i></div>
-          <h3 class="en">System Dev</h3>
-          <h3 class="zh">系統開發</h3>
-          <p class="en">Custom backend systems, CRM, and API integrations to streamline your operations.</p>
-          <p class="zh">度身訂造的內部管理系統、CRM 與自動化 API 串接，大幅提升企業營運效率。</p>
+        <div class="featured-icon">
+          <i class="fa-solid fa-shield-halved"></i>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 關於我們 (左圖右文) -->
-  <section id="about" class="section">
-    <div class="container split-layout fade-in">
-      <div class="split-image">
-        <!-- 使用 Unsplash 佔位圖模擬科技感背景 -->
-        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Tech coding">
-      </div>
-      <div class="split-text">
-        <div class="tag en">Our Vision</div>
-        <div class="tag zh">企業願景</div>
-        <h2 class="en">Innovating for the Future,<br>Securing Your Data.</h2>
-        <h2 class="zh">創新突破，實現念想<br>堅守數據隱私安全。</h2>
-        <p class="en">Loopvity is an independent studio dedicated to crafting software that respects users. We build robust architectures that keep data strictly on-device, offering a zero-telemetry environment without sacrificing functionality.</p>
-        <p class="zh">Loopvity 是一間專注於「隱私優先」的獨立軟體工作室。我們深信強大的功能不應以出賣用戶數據為代價。透過極致的本機端運算與零遙測技術，我們為客戶打造安全、高速且充滿質感的數位產品。</p>
-        
-        <div class="stats-row">
-          <div class="stat">
-            <h4>100%</h4>
-            <span class="en">Offline Capable</span>
-            <span class="zh">支援離線運作</span>
-          </div>
-          <div class="stat">
-            <h4>Zero</h4>
-            <span class="en">Telemetry</span>
-            <span class="zh">零數據追蹤</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 為什麼選擇我們 -->
-  <section id="features" class="section bg-gray">
-    <div class="container fade-in">
-      <div class="section-header">
-        <h2 class="en">Why Choose Loopvity?</h2>
-        <h2 class="zh">為什麼選擇 Loopvity？</h2>
-      </div>
-      <div class="features-list">
-        <div class="feature-item">
-          <i class="fa-solid fa-check-circle"></i>
-          <div>
-            <h4 class="en">Professional Specialization</h4>
-            <h4 class="zh">專業細化，精益求精</h4>
-            <p class="en">Every pixel and line of code is meticulously crafted.</p>
-            <p class="zh">從 UI 設計到後端架構，我們對每一個細節都要求極致。</p>
-          </div>
-        </div>
-        <div class="feature-item">
-          <i class="fa-solid fa-check-circle"></i>
-          <div>
-            <h4 class="en">Dedicated Support</h4>
-            <h4 class="zh">專人一對一跟進</h4>
-            <p class="en">Direct communication with developers, no middleman.</p>
-            <p class="zh">由資深工程師直接與您對接，確保需求精準落地無落差。</p>
-          </div>
-        </div>
-        <div class="feature-item">
-          <i class="fa-solid fa-check-circle"></i>
-          <div>
-            <h4 class="en">Privacy First</h4>
-            <h4 class="zh">隱私安全至上</h4>
-            <p class="en">Strictly adhering to zero-data collection principles.</p>
-            <p class="zh">產品預設採用本機儲存與沙盒機制，確保企業與用戶資料絕對安全。</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 深色頁尾 -->
+  <!-- 頁尾 -->
   <footer>
-    <div class="container footer-grid">
+    <div class="container footer-content fade-in">
       <div class="footer-brand">
-        <h3><i class="fa-solid fa-layer-group"></i> LOOPVITY</h3>
-        <p class="en">Crafting thoughtful, privacy-first mobile experiences.</p>
-        <p class="zh">打造無微不至的隱私安全行動體驗。</p>
+        <h3>Loopvity.</h3>
+        <p class="en">Hong Kong based software studio.</p>
+        <p class="zh">來自香港的獨立軟體工作室。</p>
       </div>
       <div class="footer-links">
-        <h4 class="en">Services</h4>
-        <h4 class="zh">核心服務</h4>
-        <a href="#services" class="en">App Development</a>
-        <a href="#services" class="zh">手機 App 開發</a>
-        <a href="#services" class="en">Web Design</a>
-        <a href="#services" class="zh">企業網站設計</a>
-      </div>
-      <div class="footer-links">
-        <h4 class="en">Legal</h4>
-        <h4 class="zh">法律政策</h4>
         <a href="https://loopvity.github.io/prompt-vault-privacy/" target="_blank" class="en">Privacy Policy</a>
         <a href="https://loopvity.github.io/prompt-vault-privacy/" target="_blank" class="zh">隱私權政策</a>
-      </div>
-      <div class="footer-links">
-        <h4 class="en">Contact</h4>
-        <h4 class="zh">聯絡方式</h4>
-        <a href="mailto:loopvity@gmail.com"><i class="fa-solid fa-envelope"></i> loopvity@gmail.com</a>
+        <a href="mailto:loopvity@gmail.com">loopvity@gmail.com</a>
       </div>
     </div>
     <div class="footer-bottom">
       <p>&copy; 2026 Loopvity. All rights reserved.</p>
     </div>
   </footer>
-
-  <!-- 浮動聯絡按鈕 (WhatsApp 風格) -->
-  <a href="mailto:loopvity@gmail.com" class="floating-btn" title="Contact Us">
-    <i class="fa-solid fa-envelope"></i>
-  </a>
 
   <script src="script.js"></script>
 </body>
