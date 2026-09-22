@@ -1,0 +1,26 @@
+backend:
+  name: github
+  repo: loopvity/loopvity.github.io
+  branch: main
+
+# 上傳圖片存放的目錄
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+# 內容欄位定義
+collections:
+  - name: "site_content"
+    label: "網站內容管理"
+    files:
+      - label: "首頁文案與設定"
+        name: "homepage"
+        file: "content/home.json"
+        fields:
+          - { label: "主視覺副標題 (英文)", name: "hero_eyebrow_en", widget: "string", default: "Independent Mobile Studio" }
+          - { label: "主視覺副標題 (中文)", name: "hero_eyebrow_zh", widget: "string", default: "獨立行動應用工作室" }
+          - { label: "大標題 (英文)", name: "hero_title_en", widget: "string", default: "Code with precision. Privacy by design." }
+          - { label: "大標題 (中文)", name: "hero_title_zh", widget: "string", default: "極致細節雕琢，捍衛數據隱私。" }
+          - { label: "簡介說明 (英文)", name: "hero_subtitle_en", widget: "text" }
+          - { label: "簡介說明 (中文)", name: "hero_subtitle_zh", widget: "text" }
+          - { label: "WhatsApp 聯絡電話", name: "whatsapp_phone", widget: "string", default: "(852) 1234-5678" }
+          - { label: "聯絡信箱", name: "contact_email", widget: "string", default: "loopvity@gmail.com" }
