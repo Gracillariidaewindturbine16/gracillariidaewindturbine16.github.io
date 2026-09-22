@@ -7,78 +7,6 @@
   <meta name="description" content="Loopvity crafts high-performance, privacy-first mobile applications and systems.">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    /* 內嵌隱私權區塊的補充樣式 */
-    .privacy-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 24px;
-      padding: 48px;
-      box-shadow: var(--shadow);
-      margin-top: 20px;
-    }
-    .privacy-badge {
-      display: inline-block;
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: var(--accent);
-      background: rgba(0, 113, 227, 0.08);
-      padding: 6px 14px;
-      border-radius: 50px;
-      margin-bottom: 20px;
-    }
-    .privacy-card h2 {
-      font-size: 2rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      margin-bottom: 8px;
-    }
-    .privacy-date {
-      font-size: 0.9rem;
-      color: var(--text-gray);
-      margin-bottom: 24px;
-      padding-bottom: 16px;
-      border-bottom: 1px solid var(--border);
-    }
-    .privacy-intro {
-      font-size: 1.05rem;
-      color: var(--text-dark);
-      margin-bottom: 32px;
-      line-height: 1.6;
-    }
-    .privacy-card h3 {
-      font-size: 1.25rem;
-      font-weight: 600;
-      margin-top: 32px;
-      margin-bottom: 12px;
-      color: var(--text-dark);
-    }
-    .privacy-card p {
-      color: var(--text-gray);
-      font-size: 0.95rem;
-      margin-bottom: 14px;
-      line-height: 1.6;
-    }
-    .privacy-card ul {
-      padding-left: 20px;
-      margin-bottom: 20px;
-    }
-    .privacy-card li {
-      color: var(--text-gray);
-      font-size: 0.95rem;
-      margin-bottom: 8px;
-    }
-    .privacy-contact-box {
-      background: var(--bg-main);
-      padding: 20px;
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      margin-top: 16px;
-    }
-    html {
-      scroll-behavior: smooth;
-    }
-  </style>
 </head>
 <body class="lang-zh">
 
@@ -110,8 +38,8 @@
           <span class="en">中</span>
           <span class="zh">EN</span>
         </button>
-        <a href="https://wa.me/你的電話號碼" target="_blank" class="contact-btn whatsapp-btn en">WhatsApp</a>
-        <a href="https://wa.me/你的電話號碼" target="_blank" class="contact-btn whatsapp-btn zh"><i class="fa-brands fa-whatsapp"></i> WhatsApp 查詢</a>
+        <a href="https://wa.me/85212345678" target="_blank" class="contact-btn whatsapp-btn en">WhatsApp</a>
+        <a href="https://wa.me/85212345678" target="_blank" class="contact-btn whatsapp-btn zh"><i class="fa-brands fa-whatsapp"></i> WhatsApp 查詢</a>
       </div>
     </div>
   </header>
@@ -200,73 +128,7 @@
     </div>
   </section>
 
-  <!-- 隱私權政策區塊 (直接整合於此，支援 #privacy 錨點跳轉) -->
-  <section id="privacy" class="section bg-light">
-    <div class="container fade-in">
-      <div class="privacy-card">
-        <div class="privacy-badge en">100% Offline &amp; Privacy-First</div>
-        <div class="privacy-badge zh">100% 離線運作 · 隱私至上</div>
-
-        <h2 class="en">Privacy Policy for Prompt Vault</h2>
-        <h2 class="zh">Prompt Vault 隱私權政策</h2>
-
-        <p class="privacy-date en"><strong>Effective Date:</strong> September 22, 2026</p>
-        <p class="privacy-date zh"><strong>生效日期：</strong> 2026 年 9 月 22 日</p>
-
-        <p class="privacy-intro en">
-          Prompt Vault is developed and operated by <strong>Loopvity</strong> ("we", "us", or "our"). We are committed to protecting your privacy. This Privacy Policy explains our data practices regarding your use of the Prompt Vault mobile application on iOS and Android.
-        </p>
-        <p class="privacy-intro zh">
-          Prompt Vault 由 <strong>Loopvity</strong>（以下簡稱「我們」）開發與營運。我們致力於保障您的個人隱私。本隱私權政策說明您在 iOS 與 Android 裝置上使用 Prompt Vault 行動應用程式時的資料處理原則。
-        </p>
-
-        <h3 class="en">1. Zero Data Collection</h3>
-        <h3 class="zh">1. 零數據收集 (Zero Data Collection)</h3>
-        <p class="en">Prompt Vault is designed from the ground up as a standalone, 100% offline application. <strong>Loopvity does not collect, transmit, track, or share any personal data, analytics, or usage behavior.</strong></p>
-        <p class="zh">Prompt Vault 自架構初期即以「完全離線」為核心原則進行設計。<strong>Loopvity 絕不收集、傳輸、追蹤或向第三方分享任何個人資訊、使用分析或操作行為數據。</strong></p>
-        <ul class="en">
-          <li>No user account or login is required.</li>
-          <li>No tracking, third-party analytics, or telemetry SDKs are embedded.</li>
-          <li>No advertising identifiers (such as IDFA or GAID) are accessed.</li>
-        </ul>
-        <ul class="zh">
-          <li>無需註冊任何使用者帳號或登入。</li>
-          <li>未內嵌任何第三方統計分析、追蹤或遙測程式碼 (SDK)。</li>
-          <li>絕不讀取廣告識別碼（如 IDFA 或 GAID）。</li>
-        </ul>
-
-        <h3 class="en">2. Local Data Storage</h3>
-        <h3 class="zh">2. 本機端資料儲存 (Local Data Storage)</h3>
-        <p class="en">All prompts, groups, tags, and settings created or imported into Prompt Vault are stored strictly on your local device storage. You maintain full ownership and control of your content at all times.</p>
-        <p class="zh">在 Prompt Vault 中建立或匯入的所有提示詞、分類群組、標籤與個人偏好設定，均僅加密/儲存於您的本機設備中。您始終擁有資料的完整所有權與掌控權。</p>
-
-        <h3 class="en">3. Offline Backups and Export</h3>
-        <h3 class="zh">3. 離線備份與匯出 (Offline Backups and Export)</h3>
-        <p class="en">When you use the backup or export feature, your data is packaged into a local JSON file directly on your device. Any subsequent distribution or backup to external targets (e.g., via the system share sheet) is entirely under your manual command.</p>
-        <p class="zh">當您使用資料備份或匯出功能時，系統會直接在您的裝置本機封裝為 JSON 格式檔案。後續是否將其備份至外接儲存設備或雲端硬碟，完全由您手動決定與控制。</p>
-
-        <h3 class="en">4. Third-Party Services</h3>
-        <h3 class="zh">4. 第三方服務聲明 (Third-Party Services)</h3>
-        <p class="en">Prompt Vault does not communicate with external servers, cloud databases, or third-party web services during normal operation. Data remains solely within your device sandbox.</p>
-        <p class="zh">Prompt Vault 在一般運作狀態下絕不會與外部伺服器、雲端資料庫或任何第三方網路服務連線。所有數據始終安全保留在應用程式沙盒環境內。</p>
-
-        <h3 class="en">5. Changes to This Privacy Policy</h3>
-        <h3 class="zh">5. 條款修訂 (Policy Changes)</h3>
-        <p class="en">We may update our Privacy Policy from time to time. Any revisions will be published directly to this page with a revised effective date.</p>
-        <p class="zh">我們可能會不定期更新本隱私權政策。任何條款修訂均會即時更新發布於本頁面，並標註最新生效日期。</p>
-
-        <h3 class="en">6. Contact Us</h3>
-        <h3 class="zh">6. 聯絡我們 (Contact Us)</h3>
-        <p class="en">If you have any questions or feedback regarding this Privacy Policy, please contact Loopvity directly:</p>
-        <p class="zh">若您對本隱私權政策有任何疑問或回饋，歡迎隨時與 Loopvity 聯繫：</p>
-        <div class="privacy-contact-box">
-          <p><strong>Email:</strong> <a href="mailto:loopvity@gmail.com">loopvity@gmail.com</a></p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 頁尾 -->
+  <!-- 頁尾 (隱私政策連結已指向獨立頁面 /privacy/) -->
   <footer>
     <div class="container footer-content fade-in">
       <div class="footer-brand">
@@ -275,9 +137,8 @@
         <p class="zh">來自香港的獨立軟體工作室。</p>
       </div>
       <div class="footer-links">
-        <!-- 連結直接跳至本頁的 #privacy 區塊 -->
-        <a href="#privacy" class="en">Privacy Policy</a>
-        <a href="#privacy" class="zh">隱私權政策</a>
+        <a href="./privacy/" class="en">Privacy Policy</a>
+        <a href="./privacy/" class="zh">隱私權政策</a>
         <a href="mailto:loopvity@gmail.com">loopvity@gmail.com</a>
       </div>
     </div>
