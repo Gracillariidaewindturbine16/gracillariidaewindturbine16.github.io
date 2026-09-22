@@ -6,30 +6,41 @@
   <title>Loopvity — Privacy-First App Studio</title>
   <meta name="description" content="Loopvity crafts high-performance, privacy-first mobile applications and systems.">
   <link rel="stylesheet" href="style.css">
-  <!-- 引入極簡圖示庫 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="lang-en">
+<body class="lang-zh">
 
-  <!-- 毛玻璃導航列 -->
+  <!-- 毛玻璃導航列 (已更新為指定選單) -->
   <header>
     <div class="nav-container">
       <a href="#" class="brand">Loopvity.</a>
       <div class="nav-links">
-        <a href="#services" class="en">Services</a>
-        <a href="#services" class="zh">服務項目</a>
-        <a href="#philosophy" class="en">Philosophy</a>
-        <a href="#philosophy" class="zh">設計理念</a>
-        <a href="https://loopvity.github.io/prompt-vault-privacy/" target="_blank" class="en">Privacy</a>
-        <a href="https://loopvity.github.io/prompt-vault-privacy/" target="_blank" class="zh">隱私政策</a>
+        <a href="#" class="en">Home</a>
+        <a href="#" class="zh">主頁</a>
+
+        <a href="#web-design" class="en">Web Design</a>
+        <a href="#web-design" class="zh">網頁設計</a>
+
+        <a href="#app-dev" class="en">App Dev</a>
+        <a href="#app-dev" class="zh">寫APP</a>
+
+        <a href="#sys-dev" class="en">System Dev</a>
+        <a href="#sys-dev" class="zh">系統開發</a>
+
+        <a href="#blog" class="en">Blog</a>
+        <a href="#blog" class="zh">BLOG</a>
+
+        <a href="#contact" class="en">Contact</a>
+        <a href="#contact" class="zh">聯絡我們</a>
       </div>
       <div class="nav-actions">
         <button id="langToggle" class="lang-btn">
           <span class="en">中</span>
           <span class="zh">EN</span>
         </button>
-        <a href="mailto:loopvity@gmail.com" class="contact-btn en">Contact</a>
-        <a href="mailto:loopvity@gmail.com" class="contact-btn zh">聯絡我們</a>
+        <!-- 右上角 WhatsApp 查詢按鈕 -->
+        <a href="https://wa.me/你的電話號碼" target="_blank" class="contact-btn whatsapp-btn en">WhatsApp</a>
+        <a href="https://wa.me/你的電話號碼" target="_blank" class="contact-btn whatsapp-btn zh"><i class="fa-brands fa-whatsapp"></i> WhatsApp 查詢</a>
       </div>
     </div>
   </header>
@@ -46,31 +57,31 @@
     <p class="hero-subtitle zh">我們專注開發高效能手機 App 與企業系統。秉持零數據收集原則，提供最純粹的原生流暢體驗。</p>
   </section>
 
-  <!-- 核心服務 (Services) -->
-  <section id="services" class="section bg-light">
+  <!-- 核心服務 -->
+  <section class="section bg-light">
     <div class="container fade-in">
-      <h2 class="section-title en">Our Expertise</h2>
-      <h2 class="section-title zh">專業領域</h2>
-      
       <div class="grid-3">
-        <div class="apple-card">
-          <i class="fa-brands fa-apple icon"></i>
-          <h3 class="en">iOS & Android Apps</h3>
-          <h3 class="zh">雙平台 App 開發</h3>
-          <p class="en">Native-feeling, offline-first mobile applications built for speed and security.</p>
-          <p class="zh">專注於流暢手感與離線架構，打造兼具速度與絕對安全的原生級行動應用。</p>
-        </div>
-        <div class="apple-card">
+        <!-- 網頁設計 -->
+        <div id="web-design" class="apple-card">
           <i class="fa-solid fa-laptop-code icon"></i>
-          <h3 class="en">Web Experiences</h3>
-          <h3 class="zh">現代化網頁設計</h3>
+          <h3 class="en">Web Design</h3>
+          <h3 class="zh">網頁設計</h3>
           <p class="en">Responsive, highly-optimized corporate websites that elevate your brand.</p>
           <p class="zh">採用最新前端技術，為您的企業量身打造具備極高轉換率與質感的品牌官網。</p>
         </div>
-        <div class="apple-card">
+        <!-- 寫APP -->
+        <div id="app-dev" class="apple-card">
+          <i class="fa-brands fa-apple icon"></i>
+          <h3 class="en">App Development</h3>
+          <h3 class="zh">寫APP</h3>
+          <p class="en">Native-feeling, offline-first mobile applications built for speed and security.</p>
+          <p class="zh">專注於流暢手感與離線架構，打造兼具速度與絕對安全的原生級行動應用。</p>
+        </div>
+        <!-- 系統開發 -->
+        <div id="sys-dev" class="apple-card">
           <i class="fa-solid fa-server icon"></i>
-          <h3 class="en">Custom Systems</h3>
-          <h3 class="zh">企業系統建置</h3>
+          <h3 class="en">System Dev</h3>
+          <h3 class="zh">系統開發</h3>
           <p class="en">Scalable backend architectures and internal tools tailored to your workflow.</p>
           <p class="zh">度身訂造的內部管理系統與自動化架構，大幅提升團隊營運效率。</p>
         </div>
@@ -78,30 +89,49 @@
     </div>
   </section>
 
-  <!-- 代表作 (Featured App) -->
-  <section id="philosophy" class="section">
+  <!-- 聯絡我們 (新增：仿照截圖的雙欄排版，注入 Apple 極簡風格) -->
+  <section id="contact" class="section">
     <div class="container fade-in">
-      <div class="featured-box">
-        <div class="featured-text">
-          <span class="badge en">Featured Project</span>
-          <span class="badge zh">代表作品</span>
-          <h2>Prompt Vault</h2>
-          <p class="en">A 100% offline, privacy-first vault for managing AI prompts. All data stays strictly on your device.</p>
-          <p class="zh">一款 100% 離線運作的 AI 提示詞管理保險箱。零雲端同步、零數據追蹤，所有資料絕對保留在您的設備中。</p>
-          <div class="tags">
-            <span>Offline First</span>
-            <span>Zero Tracking</span>
-            <span>JSON Backup</span>
+      <h2 class="section-title en">Contact Us</h2>
+      <h2 class="section-title zh">聯絡我們</h2>
+      
+      <div class="contact-grid">
+        <!-- 左側資訊 -->
+        <div class="contact-info apple-card">
+          <h3 class="en">Get in touch</h3>
+          <h3 class="zh">聯絡 Loopvity</h3>
+          <p class="desc en">We focus on providing professional software development services for businesses. Send us an email or WhatsApp for a direct consultation.</p>
+          <p class="desc zh">我們專注為企業提供專業的網頁設計、手機 APP 開發與系統建置服務。歡迎透過 WhatsApp 或電子郵件與我們聯繫，由專人一對一跟進需求。</p>
+          
+          <div class="info-list">
+            <div class="info-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Hong Kong Island, Hong Kong</span>
+            </div>
+            <div class="info-item">
+              <i class="fa-brands fa-whatsapp"></i>
+              <span>(852) 1234-5678</span>
+            </div>
+            <div class="info-item">
+              <i class="fa-solid fa-envelope"></i>
+              <span>loopvity@gmail.com</span>
+            </div>
           </div>
         </div>
-        <div class="featured-icon">
-          <i class="fa-solid fa-shield-halved"></i>
+        
+        <!-- 右側地圖 (使用高質感淺色占位圖或嵌入 Google Maps) -->
+        <div class="contact-map apple-card">
+          <div class="map-placeholder">
+            <i class="fa-solid fa-map-location-dot"></i>
+            <span class="en">Map Location</span>
+            <span class="zh">香港地圖位置</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 頁尾 -->
+  <!-- 頁尾 (Privacy 移至此處) -->
   <footer>
     <div class="container footer-content fade-in">
       <div class="footer-brand">
@@ -110,6 +140,7 @@
         <p class="zh">來自香港的獨立軟體工作室。</p>
       </div>
       <div class="footer-links">
+        <!-- Privacy 保留在頁尾是專業網站的標準作法 -->
         <a href="https://loopvity.github.io/prompt-vault-privacy/" target="_blank" class="en">Privacy Policy</a>
         <a href="https://loopvity.github.io/prompt-vault-privacy/" target="_blank" class="zh">隱私權政策</a>
         <a href="mailto:loopvity@gmail.com">loopvity@gmail.com</a>
