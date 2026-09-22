@@ -1,0 +1,289 @@
+/* --- 變數與基礎設定 --- */
+:root {
+  --bg-color: #fbfbfd;
+  --bg-light: #ffffff;
+  --text-primary: #1d1d1f;
+  --text-secondary: #86868b;
+  --accent-color: #0071e3;
+  --border-color: #d2d2d7;
+  --card-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+  --max-width: 1024px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+/* --- 雙語顯示邏輯 (核心) --- */
+/* 當 body 擁有 .lang-en 類別時，隱藏所有 .zh 元素 */
+body.lang-en .zh { display: none !important; }
+/* 當 body 擁有 .lang-zh 類別時，隱藏所有 .en 元素 */
+body.lang-zh .en { display: none !important; }
+
+/* --- 導航列 (毛玻璃) --- */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background: rgba(251, 251, 253, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  transition: background 0.3s;
+}
+
+.nav-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav-links a {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 0.85rem;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.nav-links a:hover {
+  opacity: 1;
+}
+
+.lang-btn {
+  background: none;
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  color: var(--text-primary);
+  transition: all 0.2s;
+}
+
+.lang-btn:hover {
+  background: var(--text-primary);
+  color: #fff;
+}
+
+/* --- 主視覺區 (Hero) --- */
+.hero {
+  padding: 160px 24px 100px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  font-weight: 400;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+/* --- 共用區塊設定 --- */
+.section {
+  padding: 100px 24px;
+}
+
+.bg-light {
+  background-color: var(--bg-light);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: 60px;
+}
+
+/* --- 卡片網格 (Philosophy) --- */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: var(--bg-color);
+  padding: 40px 32px;
+  border-radius: 24px;
+  text-align: left;
+  border: 1px solid transparent;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--border-color);
+  background: var(--bg-light);
+}
+
+.card .icon {
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+.card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+}
+
+.card p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+/* --- 代表作品 (Featured App) --- */
+.app-showcase {
+  background: var(--bg-light);
+  border-radius: 32px;
+  padding: 60px;
+  box-shadow: var(--card-shadow);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgba(0,0,0,0.02);
+}
+
+.app-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--accent-color);
+  background: rgba(0, 113, 227, 0.1);
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+}
+
+.app-name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+}
+
+.app-info p {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin-bottom: 32px;
+}
+
+.feature-tags {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  font-size: 0.85rem;
+  padding: 8px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  color: var(--text-primary);
+  background: var(--bg-color);
+}
+
+/* --- 頁尾 --- */
+footer {
+  padding: 60px 24px;
+  text-align: center;
+  border-top: 1px solid var(--border-color);
+  background: var(--bg-light);
+}
+
+.footer-links {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.footer-links a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: var(--text-primary);
+}
+
+.copyright {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+}
+
+/* --- 動畫效果 --- */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- 手機版響應式 --- */
+@media (max-width: 768px) {
+  .title { font-size: 2.5rem; }
+  .app-showcase { padding: 40px 24px; }
+  .app-name { font-size: 2rem; }
+}
